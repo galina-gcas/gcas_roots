@@ -51,19 +51,17 @@ const PathSection = () => {
           animationDelay: '1.5s'
         }}></div>
       </div>
-
       <div style={{
         position: 'relative',
         zIndex: 10,
-        maxWidth: '64rem',
+        maxWidth: '1200px',
         margin: '0 auto',
-        padding: '0 1rem'
+        padding: '0 2rem'
       }}>
         <div style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.95)',
-          backdropFilter: 'blur(4px)',
+          backgroundColor: 'white',
           borderRadius: '1.5rem',
-          padding: window.innerWidth >= 768 ? '3rem' : '2rem',
+          padding: window.innerWidth >= 768 ? '4rem' : '2rem',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
         }}>
           <div style={{ textAlign: 'center' }}>
@@ -71,93 +69,135 @@ const PathSection = () => {
               fontSize: window.innerWidth >= 768 ? '3rem' : '2.5rem',
               fontWeight: 'bold',
               color: 'black',
-              marginBottom: '2rem'
+              marginBottom: '3rem'
             }}>
-              Путь к себе
+              Evolution Path
             </h2>
             
-            <div style={{ textAlign: 'left', maxWidth: 'none' }}>
-              <p style={{
-                fontSize: '1.125rem',
-                color: '#374151',
-                marginBottom: '1.5rem',
-                lineHeight: 1.75
-              }}>
-                Каждый человек приходит в этот мир с уникальной миссией и предназначением. 
-                Мой путь — помочь вам найти и реализовать свой истинный потенциал, 
-                создать гармонию между материальным успехом и духовным развитием.
-              </p>
-              
-              <p style={{
-                fontSize: '1.125rem',
-                color: '#374151',
-                lineHeight: 1.75
-              }}>
-                Через астрологию, ченнелинг и энергоинформационный анализ я помогаю 
-                раскрыть ваши скрытые таланты, преодолеть внутренние блоки и создать 
-                резонанс с вашим Высшим Я для достижения процветания во всех сферах жизни.
-              </p>
-            </div>
-
-            {/* Key principles */}
+            {/* Evolution scheme */}
             <div style={{
-              marginTop: '3rem',
-              display: 'grid',
-              gridTemplateColumns: window.innerWidth >= 768 ? 'repeat(3, 1fr)' : '1fr',
-              gap: '1.5rem'
+              display: 'flex',
+              flexDirection: window.innerWidth >= 768 ? 'row' : 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: window.innerWidth >= 768 ? '3rem' : '2rem',
+              marginBottom: '3rem'
             }}>
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
+              {/* Personality */}
+              <div style={{ textAlign: 'center', flex: 1 }}>
                 <div style={{
-                  width: '4rem',
-                  height: '4rem',
-                  background: 'linear-gradient(to bottom right, #A78BFA, #9333EA)',
+                  width: '5rem',
+                  height: '5rem',
+                  border: '2px solid #9CA3AF',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   margin: '0 auto 1rem',
-                  fontSize: '1.5rem'
+                  fontSize: '2rem',
+                  color: '#6B7280'
                 }}>
-                  🎯
+                  👤
                 </div>
-                <h3 style={{ fontWeight: '600', color: 'black', marginBottom: '0.5rem' }}>Целенаправленность</h3>
-                <p style={{ color: '#6B7280', fontSize: '0.875rem' }}>Четкое понимание ваших целей и путей их достижения</p>
+                <h3 style={{ 
+                  fontWeight: '600', 
+                  color: 'black', 
+                  marginBottom: '0.5rem',
+                  fontSize: '1.25rem'
+                }}>
+                  Personality
+                </h3>
+                <p style={{ 
+                  color: '#6B7280', 
+                  fontSize: '0.9rem',
+                  lineHeight: 1.4
+                }}>
+                  Grow as a personality
+                </p>
               </div>
-              
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
-                <div style={{
-                  width: '4rem',
-                  height: '4rem',
-                  background: 'linear-gradient(to bottom right, #F472B6, #EC4899)',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 1rem',
-                  fontSize: '1.5rem'
-                }}>
-                  ⚡
-                </div>
-                <h3 style={{ fontWeight: '600', color: 'black', marginBottom: '0.5rem' }}>Энергия</h3>
-                <p style={{ color: '#6B7280', fontSize: '0.875rem' }}>Активация и гармонизация ваших энергетических потоков</p>
+
+              {/* Arrow */}
+              <div style={{
+                fontSize: '2rem',
+                color: '#9CA3AF',
+                display: window.innerWidth >= 768 ? 'block' : 'none'
+              }}>
+                →
               </div>
-              
-              <div style={{ textAlign: 'center', padding: '1rem' }}>
+
+              {/* Soul */}
+              <div style={{ textAlign: 'center', flex: 1 }}>
                 <div style={{
-                  width: '4rem',
-                  height: '4rem',
-                  background: 'linear-gradient(to bottom right, #FB923C, #F97316)',
+                  width: '5rem',
+                  height: '5rem',
+                  border: '2px solid #9CA3AF',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   margin: '0 auto 1rem',
-                  fontSize: '1.5rem'
+                  fontSize: '2rem',
+                  color: '#6B7280'
                 }}>
-                  🌟
+                  ✨
                 </div>
-                <h3 style={{ fontWeight: '600', color: 'black', marginBottom: '0.5rem' }}>Мудрость</h3>
-                <p style={{ color: '#6B7280', fontSize: '0.875rem' }}>Доступ к космическим знаниям и духовным истинам</p>
+                <h3 style={{ 
+                  fontWeight: '600', 
+                  color: 'black', 
+                  marginBottom: '0.5rem',
+                  fontSize: '1.25rem'
+                }}>
+                  Soul
+                </h3>
+                <p style={{ 
+                  color: '#6B7280', 
+                  fontSize: '0.9rem',
+                  lineHeight: 1.4
+                }}>
+                  Evolve as a soul
+                </p>
+              </div>
+
+              {/* Arrow */}
+              <div style={{
+                fontSize: '2rem',
+                color: '#9CA3AF',
+                display: window.innerWidth >= 768 ? 'block' : 'none'
+              }}>
+                →
+              </div>
+
+              {/* Heritage */}
+              <div style={{ textAlign: 'center', flex: 1 }}>
+                <div style={{
+                  width: '5rem',
+                  height: '5rem',
+                  border: '2px solid #9CA3AF',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 1rem',
+                  fontSize: '2rem',
+                  color: '#6B7280'
+                }}>
+                  🌳
+                </div>
+                <h3 style={{ 
+                  fontWeight: '600', 
+                  color: 'black', 
+                  marginBottom: '0.5rem',
+                  fontSize: '1.25rem'
+                }}>
+                  Heritage
+                </h3>
+                <p style={{ 
+                  color: '#6B7280', 
+                  fontSize: '0.9rem',
+                  lineHeight: 1.4
+                }}>
+                  Embrace the gifts and strength of your ancestry
+                </p>
               </div>
             </div>
           </div>
