@@ -28,16 +28,17 @@ const HeroSection = () => {
         position: 'relative',
         zIndex: 10,
         width: '100%',
-        maxWidth: '1280px',
+        maxWidth: '1000px',
         margin: '0 auto',
-        padding: '0 2rem'
+        padding: '2rem'
       }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: window.innerWidth >= 1024 ? '45% 55%' : '1fr',
-          gap: '2rem',
+          gridTemplateColumns: window.innerWidth >= 1024 ? '50% 50%' : '1fr',
+          gap: '3rem',
           alignItems: 'center',
-          minHeight: '80vh'
+          minHeight: '80vh',
+          padding: '2rem'
         }}>
           {/* Left content */}
           <div style={{ 
@@ -45,23 +46,14 @@ const HeroSection = () => {
             padding: window.innerWidth >= 1024 ? '0' : '0 1rem'
           }}>
             <h1 style={{
-              fontSize: window.innerWidth >= 768 ? '3.5rem' : '2.5rem',
-              fontWeight: 'bold',
+              fontSize: window.innerWidth >= 768 ? '2.25rem' : '1.75rem',
+              fontWeight: '300',
               color: 'white',
-              marginBottom: '1.5rem',
-              lineHeight: 1.1
+              marginBottom: '2rem',
+              lineHeight: 1.2
             }}>
-              Ченнелер, предприниматель,<br />
-              инфлюенсер
+              I'm Galina GCAS 🌟 — your guide to understanding yourself, your ancestry 🌳 and mission.
             </h1>
-            <p style={{
-              fontSize: window.innerWidth >= 768 ? '1.25rem' : '1.125rem',
-              color: 'white',
-              marginBottom: '2.5rem',
-              lineHeight: 1.3
-            }}>
-              Продукты для роста, услуги для бизнеса.
-            </p>
             
             {/* CTA Buttons */}
             <div style={{
@@ -86,7 +78,7 @@ const HeroSection = () => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  fontSize: '0.875rem'
+                  fontSize: '0.8rem'
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.transform = 'scale(1.05)'
@@ -97,8 +89,7 @@ const HeroSection = () => {
                   e.target.style.background = 'linear-gradient(to right, #F97316, #EF4444)'
                 }}
               >
-                <span>💬</span>
-                ОНЛАЙН-КОНСУЛЬТАЦИЯ
+                BOOK SESSION
               </button>
               <button
                 onClick={openTelegram}
@@ -112,7 +103,8 @@ const HeroSection = () => {
                   background: 'transparent',
                   cursor: 'pointer',
                   transition: 'all 0.3s',
-                  transform: 'scale(1)'
+                  transform: 'scale(1)',
+                  fontSize: '0.8rem'
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.transform = 'scale(1.05)'
@@ -125,7 +117,7 @@ const HeroSection = () => {
                   e.target.style.color = 'white'
                 }}
               >
-                ПОДОБРАТЬ ПРОДУКТ
+                CHOOSE PRODUCT
               </button>
             </div>
           </div>
@@ -138,13 +130,14 @@ const HeroSection = () => {
           }}>
             {/* Galina's photo in circular frame */}
             <div style={{
-              width: '400px',
-              height: '400px',
+              width: '350px',
+              height: '350px',
               borderRadius: '50%',
               overflow: 'hidden',
               position: 'relative',
               background: 'linear-gradient(135deg, #8B5CF6, #EC4899, #F97316)',
-              padding: '6px'
+              padding: '6px',
+              margin: '0 auto'
             }}>
                 <div style={{
                   width: '100%',

@@ -7,92 +7,53 @@ const AboutSection = () => {
       backgroundColor: 'white'
     }}>
       <div style={{
-        maxWidth: '1280px',
+        maxWidth: '1000px',
         margin: '0 auto',
-        padding: '0 1rem'
+        padding: '2rem'
       }}>
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{
-            fontSize: window.innerWidth >= 768 ? '3rem' : '2.5rem',
-            fontWeight: 'bold',
-            color: 'black',
-            marginBottom: '2rem'
-          }}>
-            Обо мне
-          </h2>
-        </div>
-
-        <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
-          <div style={{ fontSize: '1.125rem', color: '#374151', lineHeight: 1.75 }}>
-            <p style={{ marginBottom: '1.5rem' }}>
-              Родилась на Земле, пришла с γ Кассиопеи.
-              Я всегда выделялась. Но только
-              в определенный период жизни я поняла,
-              что создана для чего-то большего.
-            </p>
-            
-            <p style={{ marginBottom: '1.5rem' }}>
-              Тогда я открыла в себе способности
-              к ченнелингу: считывать энергии
-              и информацию с дальних и ближних пространств.
-            </p>
-            
-            <p>
-              Да, именно так я узнала, где есть мой источник.
-            </p>
-          </div>
-        </div>
-
-        {/* Stats or highlights */}
-        <div style={{
-          marginTop: '4rem',
-          display: 'grid',
-          gridTemplateColumns: window.innerWidth >= 768 ? 'repeat(3, 1fr)' : '1fr',
-          gap: '2rem'
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: window.innerWidth >= 1024 ? '1fr 1fr' : '1fr', 
+          gap: '3rem', 
+          alignItems: 'center' 
         }}>
-          <div style={{
-            textAlign: 'center',
-            padding: '1.5rem',
-            background: 'linear-gradient(to bottom right, #F3E8FF, #FCE7F3)',
-            borderRadius: '0.75rem'
-          }}>
-            <div style={{
-              fontSize: '1.875rem',
+          <div>
+            <h2 style={{
+              fontSize: window.innerWidth >= 768 ? '3rem' : '2.5rem',
               fontWeight: 'bold',
-              color: '#9333EA',
-              marginBottom: '0.5rem'
-            }}>10+</div>
-            <div style={{ color: '#374151' }}>Лет опыта в ченнелинге</div>
+              color: 'black',
+              marginBottom: '2rem'
+            }}>
+              About the Project
+            </h2>
+            <div style={{ fontSize: '1.125rem', color: '#374151', lineHeight: 1.75 }}>
+              <p style={{ marginBottom: '1.5rem' }}>
+                This is my multilingual project: here you can learn about <strong>yourself, your heritage, and your mission</strong>.
+              </p>
+              
+              <p style={{ marginBottom: '1.5rem' }}>
+                Grow as a personality, evolve as a soul rooted 🌳 in the gifts and strength of those who've come before you.
+              </p>
+              
+              <p>
+                I use <em>astrology and channeling</em> as tools to connect with realms of your guides and ancestors and empower you with the system of knowledge.
+              </p>
+            </div>
           </div>
-          <div style={{
-            textAlign: 'center',
-            padding: '1.5rem',
-            background: 'linear-gradient(to bottom right, #FCE7F3, #FED7AA)',
-            borderRadius: '0.75rem'
-          }}>
-            <div style={{
-              fontSize: '1.875rem',
-              fontWeight: 'bold',
-              color: '#EC4899',
-              marginBottom: '0.5rem'
-            }}>1000+</div>
-            <div style={{ color: '#374151' }}>Успешных консультаций</div>
-          </div>
-          <div style={{
-            textAlign: 'center',
-            padding: '1.5rem',
-            background: 'linear-gradient(to bottom right, #FED7AA, #F3E8FF)',
-            borderRadius: '0.75rem'
-          }}>
-            <div style={{
-              fontSize: '1.875rem',
-              fontWeight: 'bold',
-              color: '#F97316',
-              marginBottom: '0.5rem'
-            }}>50+</div>
-            <div style={{ color: '#374151' }}>Бизнес-проектов</div>
+          
+          <div style={{ textAlign: 'center' }}>
+            <img 
+              src="/tree.png" 
+              alt="Tree of Life"
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+                borderRadius: '1rem'
+              }}
+            />
           </div>
         </div>
+
       </div>
     </section>
   )
