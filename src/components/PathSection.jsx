@@ -85,18 +85,38 @@ const PathSection = () => {
             }}>
               {/* Personality */}
               <div style={{ textAlign: 'center', flex: 1 }}>
-                <div style={{
-                  width: '5rem',
-                  height: '5rem',
-                  border: '2px solid #9CA3AF',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 1rem',
-                  fontSize: '2rem',
-                  color: '#6B7280'
-                }}>
+                <div 
+                  onClick={() => {
+                    const element = document.getElementById('personality')
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                  style={{
+                    width: '5rem',
+                    height: '5rem',
+                    border: '2px solid #9CA3AF',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 1rem',
+                    fontSize: '2rem',
+                    color: '#6B7280',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.borderColor = '#8B5CF6'
+                    e.target.style.color = '#8B5CF6'
+                    e.target.style.transform = 'scale(1.1)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.borderColor = '#9CA3AF'
+                    e.target.style.color = '#6B7280'
+                    e.target.style.transform = 'scale(1)'
+                  }}
+                >
                   👤
                 </div>
                 <h3 style={{ 
@@ -127,18 +147,38 @@ const PathSection = () => {
 
               {/* Soul */}
               <div style={{ textAlign: 'center', flex: 1 }}>
-                <div style={{
-                  width: '5rem',
-                  height: '5rem',
-                  border: '2px solid #9CA3AF',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 1rem',
-                  fontSize: '2rem',
-                  color: '#6B7280'
-                }}>
+                <div 
+                  onClick={() => {
+                    const element = document.getElementById('soul')
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                  style={{
+                    width: '5rem',
+                    height: '5rem',
+                    border: '2px solid #9CA3AF',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 1rem',
+                    fontSize: '2rem',
+                    color: '#6B7280',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.borderColor = '#8B5CF6'
+                    e.target.style.color = '#8B5CF6'
+                    e.target.style.transform = 'scale(1.1)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.borderColor = '#9CA3AF'
+                    e.target.style.color = '#6B7280'
+                    e.target.style.transform = 'scale(1)'
+                  }}
+                >
                   ✨
                 </div>
                 <h3 style={{ 
@@ -169,18 +209,38 @@ const PathSection = () => {
 
               {/* Heritage */}
               <div style={{ textAlign: 'center', flex: 1 }}>
-                <div style={{
-                  width: '5rem',
-                  height: '5rem',
-                  border: '2px solid #9CA3AF',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 1rem',
-                  fontSize: '2rem',
-                  color: '#6B7280'
-                }}>
+                <div 
+                  onClick={() => {
+                    const element = document.getElementById('heritage')
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                  style={{
+                    width: '5rem',
+                    height: '5rem',
+                    border: '2px solid #9CA3AF',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 1rem',
+                    fontSize: '2rem',
+                    color: '#6B7280',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.borderColor = '#8B5CF6'
+                    e.target.style.color = '#8B5CF6'
+                    e.target.style.transform = 'scale(1.1)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.borderColor = '#9CA3AF'
+                    e.target.style.color = '#6B7280'
+                    e.target.style.transform = 'scale(1)'
+                  }}
+                >
                   🌳
                 </div>
                 <h3 style={{ 
