@@ -96,11 +96,11 @@ const PathSection = () => {
                     width: '5rem',
                     height: '5rem',
                     border: '2px solid #9CA3AF',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 1rem',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 1rem',
                     fontSize: '2rem',
                     color: '#6B7280',
                     cursor: 'pointer',
@@ -134,7 +134,7 @@ const PathSection = () => {
                 }}>
                   Grow as a personality
                 </p>
-              </div>
+                </div>
 
               {/* Arrow */}
               <div style={{
@@ -144,7 +144,7 @@ const PathSection = () => {
               }}>
                 →
               </div>
-
+              
               {/* Soul */}
               <div style={{ textAlign: 'center', flex: 1 }}>
                 <div 
@@ -158,11 +158,11 @@ const PathSection = () => {
                     width: '5rem',
                     height: '5rem',
                     border: '2px solid #9CA3AF',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 1rem',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 1rem',
                     fontSize: '2rem',
                     color: '#6B7280',
                     cursor: 'pointer',
@@ -196,7 +196,7 @@ const PathSection = () => {
                 }}>
                   Evolve as a soul
                 </p>
-              </div>
+                </div>
 
               {/* Arrow */}
               <div style={{
@@ -206,7 +206,7 @@ const PathSection = () => {
               }}>
                 →
               </div>
-
+              
               {/* Heritage */}
               <div style={{ textAlign: 'center', flex: 1 }}>
                 <div 
@@ -220,11 +220,11 @@ const PathSection = () => {
                     width: '5rem',
                     height: '5rem',
                     border: '2px solid #9CA3AF',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 1rem',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 1rem',
                     fontSize: '2rem',
                     color: '#6B7280',
                     cursor: 'pointer',

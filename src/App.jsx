@@ -4,6 +4,8 @@ import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
 import PathSection from './components/PathSection'
 import PersonalitySection from './components/PersonalitySection'
+import SunDivider from './components/SunDivider'
+import SoulSection from './components/SoulSection'
 import ServicesSection from './components/ServicesSection'
 import FutureSection from './components/FutureSection'
 import MediaSection from './components/MediaSection'
@@ -19,6 +21,8 @@ function App() {
       <AboutSection />
       <PathSection />
       <PersonalitySection />
+      <SunDivider />
+      <SoulSection />
       <ServicesSection />
       <FutureSection />
       <MediaSection />
