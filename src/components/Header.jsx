@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [language, setLanguage] = useState('en')
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
@@ -38,13 +39,14 @@ const Header = () => {
               fontSize: '1.5rem',
               fontWeight: 'bold',
               color: 'black'
-            }}>Галина GCAS</h1>
+            }}>GCAS Roots</h1>
           </div>
 
           {/* Desktop Navigation */}
           <nav style={{
             display: window.innerWidth >= 768 ? 'flex' : 'none',
-            gap: '2rem'
+            gap: '2rem',
+            alignItems: 'center'
           }}>
             <button
               onClick={() => scrollToSection('about')}
@@ -59,7 +61,7 @@ const Header = () => {
               onMouseEnter={(e) => e.target.style.color = '#8B5CF6'}
               onMouseLeave={(e) => e.target.style.color = 'black'}
             >
-              Кто я?
+              About project
             </button>
             <button
               onClick={() => scrollToSection('products')}
@@ -74,7 +76,7 @@ const Header = () => {
               onMouseEnter={(e) => e.target.style.color = '#8B5CF6'}
               onMouseLeave={(e) => e.target.style.color = 'black'}
             >
-              Продукты
+              Products
             </button>
             <button
               onClick={() => scrollToSection('services')}
@@ -89,38 +91,52 @@ const Header = () => {
               onMouseEnter={(e) => e.target.style.color = '#8B5CF6'}
               onMouseLeave={(e) => e.target.style.color = 'black'}
             >
-              Услуги
+              Sessions
             </button>
-            <button
-              onClick={() => scrollToSection('consultation')}
-              style={{
-                color: 'black',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '1rem',
-                transition: 'color 0.2s'
-              }}
-              onMouseEnter={(e) => e.target.style.color = '#8B5CF6'}
-              onMouseLeave={(e) => e.target.style.color = 'black'}
-            >
-              Консультация
-            </button>
-            <button
-              onClick={() => scrollToSection('media')}
-              style={{
-                color: 'black',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '1rem',
-                transition: 'color 0.2s'
-              }}
-              onMouseEnter={(e) => e.target.style.color = '#8B5CF6'}
-              onMouseLeave={(e) => e.target.style.color = 'black'}
-            >
-              СМИ обо мне
-            </button>
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', height: '2.5rem' }}>
+              <button
+                onClick={() => setLanguage('en')}
+                style={{
+                  background: 'none',
+                  border: language === 'en' ? '1px solid black' : '1px solid transparent',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  fontSize: '1.2rem',
+                  opacity: language === 'en' ? 1 : 0.5,
+                  transition: 'all 0.2s',
+                  padding: '0.25rem',
+                  height: '2.5rem',
+                  width: '2.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  lineHeight: '1'
+                }}
+              >
+                🇺🇸
+              </button>
+              <button
+                onClick={() => setLanguage('ru')}
+                style={{
+                  background: 'none',
+                  border: language === 'ru' ? '1px solid black' : '1px solid transparent',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  fontSize: '1.2rem',
+                  opacity: language === 'ru' ? 1 : 0.5,
+                  transition: 'all 0.2s',
+                  padding: '0.25rem',
+                  height: '2.5rem',
+                  width: '2.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  lineHeight: '1'
+                }}
+              >
+                🇷🇺
+              </button>
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -167,7 +183,7 @@ const Header = () => {
                   textAlign: 'left'
                 }}
               >
-                Кто я?
+                About project
               </button>
               <button
                 onClick={() => scrollToSection('products')}
@@ -182,7 +198,7 @@ const Header = () => {
                   textAlign: 'left'
                 }}
               >
-                Продукты
+                Products
               </button>
               <button
                 onClick={() => scrollToSection('services')}
@@ -197,38 +213,59 @@ const Header = () => {
                   textAlign: 'left'
                 }}
               >
-                Услуги
+                Sessions
               </button>
-              <button
-                onClick={() => scrollToSection('consultation')}
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  color: 'black',
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  textAlign: 'left'
-                }}
-              >
-                Консультация
-              </button>
-              <button
-                onClick={() => scrollToSection('media')}
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  color: 'black',
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  textAlign: 'left'
-                }}
-              >
-                СМИ обо мне
-              </button>
+              <div style={{ 
+                display: 'flex', 
+                gap: '1rem', 
+                padding: '0.75rem 1rem',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '3rem'
+              }}>
+                <button
+                  onClick={() => setLanguage('en')}
+                  style={{
+                    background: 'none',
+                    border: language === 'en' ? '1px solid black' : '1px solid transparent',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontSize: '1.2rem',
+                    opacity: language === 'en' ? 1 : 0.5,
+                    transition: 'all 0.2s',
+                    padding: '0.25rem',
+                    height: '2.5rem',
+                    width: '2.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    lineHeight: '1'
+                  }}
+                >
+                  🇺🇸
+                </button>
+                <button
+                  onClick={() => setLanguage('ru')}
+                  style={{
+                    background: 'none',
+                    border: language === 'ru' ? '1px solid black' : '1px solid transparent',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontSize: '1.2rem',
+                    opacity: language === 'ru' ? 1 : 0.5,
+                    transition: 'all 0.2s',
+                    padding: '0.25rem',
+                    height: '2.5rem',
+                    width: '2.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    lineHeight: '1'
+                  }}
+                >
+                  🇷🇺
+                </button>
+              </div>
             </div>
           </div>
         )}
