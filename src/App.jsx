@@ -6,6 +6,7 @@ import PathSection from './components/PathSection'
 import PersonalitySection from './components/PersonalitySection'
 import SunDivider from './components/SunDivider'
 import SoulSection from './components/SoulSection'
+import HeritageSection from './components/HeritageSection'
 import FutureSection from './components/FutureSection'
 import ConsultationForm from './components/ConsultationForm'
 import Footer from './components/Footer'
@@ -20,6 +21,7 @@ function App() {
       <PersonalitySection />
       <SunDivider />
       <SoulSection />
+      <HeritageSection />
       <FutureSection />
       <ConsultationForm />
       <Footer />
