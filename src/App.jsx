@@ -8,7 +8,7 @@ import SunDivider from './components/SunDivider'
 import SoulSection from './components/SoulSection'
 import HeritageSection from './components/HeritageSection'
 import FutureSection from './components/FutureSection'
-import ConsultationForm from './components/ConsultationForm'
+import BookSessionSection from './components/BookSessionSection'
 import Footer from './components/Footer'
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <SoulSection />
       <HeritageSection />
       <FutureSection />
-      <ConsultationForm />
+      <BookSessionSection />
       <Footer />
     </div>
   )
