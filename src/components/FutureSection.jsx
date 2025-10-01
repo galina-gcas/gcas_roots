@@ -97,7 +97,7 @@ const FutureSection = () => {
             color: 'rgba(255, 255, 255, 0.9)',
             fontWeight: '300'
           }}>
-            на новой Земле,
+            на новой Земле!
           </p>
         </div>
 

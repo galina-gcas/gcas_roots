@@ -79,7 +79,7 @@ const Header = () => {
               Products
             </button>
             <button
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToSection('book-session')}
               style={{
                 color: 'black',
                 background: 'none',
@@ -201,7 +201,7 @@ const Header = () => {
                 Products
               </button>
               <button
-                onClick={() => scrollToSection('services')}
+                onClick={() => scrollToSection('book-session')}
                 style={{
                   display: 'block',
                   width: '100%',
