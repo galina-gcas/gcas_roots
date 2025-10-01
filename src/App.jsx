@@ -2,8 +2,8 @@ import React from 'react'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
-import ProductsSection from './components/ProductsSection'
 import PathSection from './components/PathSection'
+import PersonalitySection from './components/PersonalitySection'
 import ServicesSection from './components/ServicesSection'
 import FutureSection from './components/FutureSection'
 import MediaSection from './components/MediaSection'
@@ -18,7 +18,7 @@ function App() {
       <HeroSection />
       <AboutSection />
       <PathSection />
-      <ProductsSection />
+      <PersonalitySection />
       <ServicesSection />
       <FutureSection />
       <MediaSection />
