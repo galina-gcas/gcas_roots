@@ -6,19 +6,19 @@ const SoulSection = () => {
       id: 'karma-lessons',
       title: 'Karma Lessons',
       description: 'Unveil your past karma and your karmic tasks for the current embodiment.',
-      image: '/placeholder-karma.jpg'
+      image: '/karma.png'
     },
     {
       id: 'karma-meditation',
       title: 'Karma Lessons + Meditation "Past Life"',
       description: 'Harness both the power of astrology and channeling to unlock your true soul\'s potential.',
-      image: '/placeholder-karma-meditation.jpg'
+      image: '/karma-past-life.png'
     },
     {
       id: 'meditation-past-life',
       title: 'Meditation "Past Life"',
       description: 'Dive into your past experiences to discover new ways for the ongoing life',
-      image: '/placeholder-meditation.jpg'
+      image: '/past-life.png'
     }
   ]
 
@@ -80,9 +80,18 @@ const SoulSection = () => {
                 justifyContent: 'center',
                 fontSize: '3rem',
                 color: '#9CA3AF',
-                border: '2px solid #E5E7EB'
+                border: '2px solid #E5E7EB',
+                overflow: 'hidden'
               }}>
-                📷
+                <img 
+                  src={product.image} 
+                  alt={product.title}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
               </div>
 
               {/* Product Title */}

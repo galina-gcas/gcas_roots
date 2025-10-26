@@ -6,25 +6,25 @@ const PersonalitySection = () => {
       id: 'personal-boundaries',
       title: 'Personal Boundaries',
       description: 'Learn to define and protect your boundaries.',
-      image: '/placeholder-boundaries.jpg'
+      image: '/boundaries.png'
     },
     {
       id: 'efficiency',
       title: 'Efficiency',
       description: 'Discover ways to improve your effectiveness',
-      image: '/placeholder-efficiency.jpg'
+      image: '/efficiency.png'
     },
     {
       id: 'attraction-self-love',
       title: 'Attraction & Self-Love',
       description: 'Reveal your feminine power',
-      image: '/placeholder-attraction.jpg'
+      image: '/feminine.png'
     },
     {
       id: 'mission',
       title: 'Mission',
       description: 'Pursue your genuine mission',
-      image: '/placeholder-mission.jpg'
+      image: '/mission.png'
     }
   ]
 
@@ -86,9 +86,18 @@ const PersonalitySection = () => {
                 justifyContent: 'center',
                 fontSize: '3rem',
                 color: '#9CA3AF',
-                border: '2px solid #E5E7EB'
+                border: '2px solid #E5E7EB',
+                overflow: 'hidden'
               }}>
-                📷
+                <img 
+                  src={product.image} 
+                  alt={product.title}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
               </div>
 
               {/* Product Title */}
