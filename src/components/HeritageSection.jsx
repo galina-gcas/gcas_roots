@@ -136,9 +136,18 @@ const HeritageSection = () => {
             justifyContent: 'center',
             fontSize: '3rem',
             color: '#9CA3AF',
-            border: '2px solid #E5E7EB'
+            border: '2px solid #E5E7EB',
+            overflow: 'hidden'
           }}>
-            📷
+            <img 
+              src="/tree.png" 
+              alt="Heritage"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
+            />
           </div>
 
           {/* Product Title */}
