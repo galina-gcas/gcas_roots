@@ -1,32 +1,75 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ProductModal from './ProductModal'
 
 const PersonalitySection = () => {
+  const [modalState, setModalState] = useState({ isOpen: false, product: null, type: null })
+
   const products = [
     {
       id: 'personal-boundaries',
       title: 'Personal Boundaries',
-      description: 'Learn to define and protect your boundaries.',
-      image: '/boundaries.png'
+      description: 'Learn to define and protect your boundaries',
+      image: '/boundaries.png',
+      price: '99',
+      fullDescription: {
+        paragraph1: 'Learn to define and protect your personal boundaries with this comprehensive guide based on your natal chart. Understanding and maintaining healthy boundaries is essential for personal growth and healthy relationships.',
+        paragraph2: 'This set of instructions will teach you practical techniques to identify, communicate, and enforce your boundaries effectively in all areas of your life.'
+      },
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide will be sent to your contacts.',
+      messengerLink: 'https://t.me/yourusername'
     },
     {
       id: 'efficiency',
       title: 'Efficiency',
       description: 'Discover ways to improve your effectiveness',
-      image: '/efficiency.png'
+      image: '/efficiency.png',
+      price: '89',
+      fullDescription: {
+        paragraph1: 'Discover powerful strategies to enhance your productivity and efficiency in a professional setting.',
+        paragraph2: 'Learn individual techniques, energy optimization methods, and practical tools that will help you achieve more with less effort — all based on your natal chart.'
+      },
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide will be sent to your contacts.',
+      messengerLink: 'https://t.me/yourusername'
     },
     {
       id: 'attraction-self-love',
       title: 'Attraction & Self-Love',
       description: 'Reveal your feminine power',
-      image: '/feminine.png'
+      image: '/feminine.png',
+      price: '129',
+      fullDescription: {
+        paragraph1: 'Reveal and embrace your feminine power through the practices of attraction and self-love. This transformative journey helps you reconnect with your authentic self.',
+        paragraph2: 'Discover techniques to cultivate self-love, attract meaningful relationships, and embody your natural feminine energy with confidence and grace — all based on your natal chart.'
+      },
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide will be sent to your contacts.',
+      messengerLink: 'https://t.me/yourusername'
     },
     {
       id: 'mission',
       title: 'Mission',
       description: 'Pursue your genuine mission',
-      image: '/mission.png'
+      image: '/mission.png',
+      price: '149',
+      fullDescription: {
+        paragraph1: 'Discover your true life mission and learn how to pursue it with clarity and purpose. This set of instructions guides you through the process of uncovering your authentic calling.',
+        paragraph2: 'You will gain insights into your unique talents, values, and how to align your daily actions with your higher purpose for a fulfilling life.'
+      },
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide will be sent to your contacts.',
+      messengerLink: 'https://t.me/yourusername'
     }
   ]
+
+  const handleReadMore = (product) => {
+    setModalState({ isOpen: true, product, type: 'readmore' })
+  }
+
+  const handleBuy = (product) => {
+    setModalState({ isOpen: true, product, type: 'buy' })
+  }
+
+  const closeModal = () => {
+    setModalState({ isOpen: false, product: null, type: null })
+  }
 
   return (
     <section id="personality" style={{
@@ -139,6 +182,7 @@ const PersonalitySection = () => {
                 marginTop: 'auto'
               }}>
                 <button
+                  onClick={() => handleReadMore(product)}
                   style={{
                     padding: '0.5rem 1rem',
                     border: '1px solid black',
@@ -180,6 +224,7 @@ const PersonalitySection = () => {
                   </span>
                 </button>
                 <button
+                  onClick={() => handleBuy(product)}
                   style={{
                     padding: '0.5rem 1rem',
                     border: 'none',
@@ -220,6 +265,12 @@ const PersonalitySection = () => {
           ))}
         </div>
       </div>
+      <ProductModal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+        product={modalState.product}
+        type={modalState.type}
+      />
     </section>
   )
 }

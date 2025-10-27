@@ -1,26 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ProductModal from './ProductModal'
 
 const SoulSection = () => {
+  const [modalState, setModalState] = useState({ isOpen: false, product: null, type: null })
+
   const products = [
     {
       id: 'karma-lessons',
       title: 'Karma Lessons',
-      description: 'Unveil your past karma and your karmic tasks for the current embodiment.',
-      image: '/karma.png'
+      description: 'Unveil your past karma and your karmic tasks for the current embodiment',
+      image: '/karma.png',
+      price: '199',
+      fullDescription: {
+        paragraph1: 'Unveil your past karma and discover your karmic tasks for this current embodiment. Through karmic astrology, you will gain profound insights into the patterns and lessons from your past lives.',
+        paragraph2: 'Understanding your karmic journey helps you make better choices in the present and align with your soul\'s true purpose for this lifetime.'
+      },
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide will be sent to your contacts.',
+      messengerLink: 'https://t.me/yourusername'
     },
     {
       id: 'karma-meditation',
       title: 'Karma Lessons + Meditation "Past Life"',
-      description: 'Harness both the power of astrology and channeling to unlock your true soul\'s potential.',
-      image: '/karma-past-life.png'
+      description: 'Harness both the power of astrology and channeling to unlock your true soul\'s potential',
+      image: '/karma-past-life.png',
+      price: '299',
+      fullDescription: {
+        paragraph1: 'Combine the power of karmic astrology with a guided past life meditation journey. This duo will help you understand your karmic patterns and then energetically heal and transform them.',
+        paragraph2: 'Experience a deep connection with your past lives through channeled meditation, gaining clarity on your soul\'s evolution and your purpose in this incarnation.'
+      },
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide, and meditation, will be sent to your contacts.',
+      messengerLink: 'https://t.me/yourusername'
     },
     {
       id: 'meditation-past-life',
       title: 'Meditation "Past Life"',
       description: 'Dive into your past experiences to discover new ways for the ongoing life',
-      image: '/past-life.png'
+      image: '/past-life.png',
+      price: '149',
+      fullDescription: {
+        paragraph1: 'Dive into your past experiences through a transformative meditation journey. This guided session will help you access past life memories and understand their influence on your current life.',
+        paragraph2: 'Discover new perspectives and healing modalities that can transform your present reality by understanding and integrating wisdom from your past incarnations.'
+      },
+      buyInfo: 'You need to send me your full name, e-mail/Telegram or other messenger. The meditation will be sent to your contacts.',
+      messengerLink: 'https://t.me/yourusername'
     }
   ]
+
+  const handleReadMore = (product) => {
+    setModalState({ isOpen: true, product, type: 'readmore' })
+  }
+
+  const handleBuy = (product) => {
+    setModalState({ isOpen: true, product, type: 'buy' })
+  }
+
+  const closeModal = () => {
+    setModalState({ isOpen: false, product: null, type: null })
+  }
 
   return (
     <section id="soul" style={{
@@ -133,6 +169,7 @@ const SoulSection = () => {
                 marginTop: 'auto'
               }}>
                 <button
+                  onClick={() => handleReadMore(product)}
                   style={{
                     padding: '0.5rem 1rem',
                     border: '1px solid black',
@@ -174,6 +211,7 @@ const SoulSection = () => {
                   </span>
                 </button>
                 <button
+                  onClick={() => handleBuy(product)}
                   style={{
                     padding: '0.5rem 1rem',
                     border: 'none',
@@ -214,6 +252,12 @@ const SoulSection = () => {
           ))}
         </div>
       </div>
+      <ProductModal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+        product={modalState.product}
+        type={modalState.type}
+      />
     </section>
   )
 }
