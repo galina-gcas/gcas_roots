@@ -110,7 +110,7 @@ const ProductModal = ({ isOpen, onClose, product, type }) => {
                 color: '#6B7280',
                 marginBottom: '1.5rem'
               }}>
-                {product.buyInfo || 'Get instant access to this transformative program after purchase.'}
+                {product.buyInfo || 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide will be sent to your contacts.'}
               </p>
               <a
                 href={product.messengerLink || 'https://t.me/yourusername'}

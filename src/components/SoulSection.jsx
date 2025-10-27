@@ -15,7 +15,7 @@ const SoulSection = () => {
         paragraph1: 'Unveil your past karma and discover your karmic tasks for this current embodiment. Through karmic astrology, you will gain profound insights into the patterns and lessons from your past lives.',
         paragraph2: 'Understanding your karmic journey helps you make better choices in the present and align with your soul\'s true purpose for this lifetime.'
       },
-      buyInfo: 'Get instant access to Karma Lessons with detailed analysis and materials',
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide will be sent to your contacts.',
       messengerLink: 'https://t.me/yourusername'
     },
     {
@@ -28,7 +28,7 @@ const SoulSection = () => {
         paragraph1: 'Combine the power of karmic astrology with a guided past life meditation journey. This duo will help you understand your karmic patterns and then energetically heal and transform them.',
         paragraph2: 'Experience a deep connection with your past lives through channeled meditation, gaining clarity on your soul\'s evolution and your purpose in this incarnation.'
       },
-      buyInfo: 'Get instant access to complete Karma Lessons and Past Life Meditation program.',
+      buyInfo: 'Creating the set will take up to 7 days, you need to send me your full name, e-mail/Telegram or other messenger, date and time, and location of your birth. The guide, and meditation, will be sent to your contacts.',
       messengerLink: 'https://t.me/yourusername'
     },
     {
@@ -41,7 +41,7 @@ const SoulSection = () => {
         paragraph1: 'Dive into your past experiences through a transformative meditation journey. This guided session will help you access past life memories and understand their influence on your current life.',
         paragraph2: 'Discover new perspectives and healing modalities that can transform your present reality by understanding and integrating wisdom from your past incarnations.'
       },
-      buyInfo: 'Get instant access to Past Life Meditation with guided audio and materials.',
+      buyInfo: 'You need to send me your full name, e-mail/Telegram or other messenger. The meditation will be sent to your contacts.',
       messengerLink: 'https://t.me/yourusername'
     }
   ]
